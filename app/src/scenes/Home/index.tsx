@@ -5,11 +5,18 @@ import heroImg from './hero.jpg';
 import logo from '../../../public/academix-logo.png';
 import Categories from './components/catogories';
 import SLEFLogo from './SLEFLogo.png';
+import ReactGA from 'react-ga';
 
 const { Title } = Typography;
 
+function initializeReactGA() {
+  ReactGA.initialize('UA-167873271-2');
+  ReactGA.pageview('/academix');
+}
+
 class Home extends React.Component {
   render() {
+    initializeReactGA();
     return (
       <Row>
         <Col md={0} lg={2} />
